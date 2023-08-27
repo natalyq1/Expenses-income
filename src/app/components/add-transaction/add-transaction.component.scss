@@ -1,0 +1,126 @@
+@use "../../../styles.scss" as s;
+
+.add-transaction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0;
+  h2 {
+    font-family: s.$font-family;
+    text-align: center;
+    color: #a4bafb;
+    font-weight: 500;
+    margin: 1em 0;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  &__amount {
+    border-radius: 9999px;
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    width: 20rem;
+    padding: 0.3rem 2rem;
+    font-family: s.$font-family;
+    font-weight: 300;
+    color: #440d5c;
+  }
+  &__type {
+    display: flex;
+    label {
+      margin: 0.4rem 1.5rem 0 0.4rem;
+      font-family: s.$font-family;
+      font-size: 1.2rem;
+      color: #fff;
+    }
+    input[type="radio"] {
+      // Reset appearance
+      appearance: none;
+      // Normal state
+      background-color: #a4bafb;
+      width: 1.2rem;
+      height: 1.2rem;
+      border: 1px solid #440d5c;
+      border-radius: 50%;
+      transform: translateY(0.2rem);
+      // Display check mark
+      display: grid;
+      place-content: center;
+      &::before {
+        content: "";
+        width: 0.8rem;
+        height: 0.8rem;
+        border-radius: 50%;
+        transform: scale(0);
+        box-shadow: inset 1rem 1rem #440d5c;
+      }
+      &:checked::before {
+        transform: scale(1);
+      }
+    }
+  }
+  input[type="date"],
+  select,
+  select::selection {
+    font-family: s.$font-family;
+    font-size: 1.5rem;
+    font-weight: 200;
+    color: rgba(68, 13, 92, 1);
+    padding: .5rem 1.5rem;
+    border-radius: 1rem 1.5rem;
+    border: none;
+    outline: none;
+    margin: .3em;
+  }
+  button {
+    border: none;
+    outline: none;
+    font-family: s.$font-family;
+    background-image: linear-gradient(
+      to right bottom,
+      rgb(115, 19, 91),
+      rgba(68, 13, 92, 1),
+      rgb(21, 8, 85),
+      rgb(13, 89, 92)
+    );
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 1rem 1.7rem;
+    border-radius: 10px;
+    width: 15rem;
+    cursor: pointer;
+  }
+  a {
+    font-family: s.$font-family;
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: #a4bafb;
+    margin-top: 1em;
+  }
+
+  input.ng-invalid.ng-touched {
+    border: 2px solid #a4bafb;
+  }
+
+  &__error-message {
+    font-family: s.$font-family;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #a4bafb;
+  }
+  // Chrome, Safari, Edge, Opera
+  input ::-webkit-outer-spin-button,
+  input ::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  //Firefox
+  input[type='number'] {
+    -moz-appearance: textfield;
+    appearance: text-field;
+  }
+}

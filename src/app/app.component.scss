@@ -1,0 +1,11 @@
+.container{
+  background-color: #3c0c3fdc;
+  width: auto;
+  height: auto;
+  padding: 2em;
+}
+@media only screen and (min-width: 600px) {
+.container{
+  padding: 2em 10em;
+}
+}

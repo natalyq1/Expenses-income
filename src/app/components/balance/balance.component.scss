@@ -1,0 +1,39 @@
+@use "../../../styles.scss" as v;
+
+.balance {
+
+  border-radius: 20px;
+  font-family: v.$font-family;
+
+  &__header {
+    margin: 1.7em auto;
+    color: map-get(v.$colors, "balance");
+    h4 {
+      font-weight: 200;
+      text-align: center;
+    }
+    h2 {
+      font-size: 2.2rem;
+      text-align: center;
+      font-weight: 500;
+    }
+  }
+  &__info {
+    display: flex;
+    justify-content: space-around;
+    h4 {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    h3 {
+      font-weight: 600;
+      font-size: 1.7rem;
+    }
+    .balance__income {
+      color: map-get(v.$colors, "income");
+    }
+    .balance__expenses {
+      color: map-get(v.$colors, "expenses");
+    }
+  }
+}
