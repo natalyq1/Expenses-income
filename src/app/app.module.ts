@@ -1,9 +1,13 @@
+
 // Modulos de Angular
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 //Libretria que viene con Angular para forms
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+
+//Libreria para charts
+import { NgChartsModule } from 'ng2-charts';
 
 //Routing del modulo
 import { AppRoutingModule } from './app-routing.module';
@@ -18,6 +22,7 @@ import { AddTransactionComponent } from './components/add-transaction/add-transa
 import { ResumeComponent } from './components/resume/resume.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,13 +31,14 @@ import { ResumeComponent } from './components/resume/resume.component';
     TransactionComponent,
     HomeComponent,
     AddTransactionComponent,
-    ResumeComponent,
+    ResumeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NgChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
