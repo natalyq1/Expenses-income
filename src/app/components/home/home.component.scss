@@ -1,7 +1,15 @@
-.main{
+@use "../../../styles.scss" as s;
+
+.main {
   display: grid;
-  grid-template-rows: 150px auto;
+  grid-template-rows: 50px auto;
   column-gap: 20px;
   padding: 10px 0;
   /*background: red;*/
+}
+
+h1 {
+  text-align: center;
+  color: #a4bafb;
+  font-family: s.$font-family;
 }

@@ -1,12 +1,12 @@
 @use "../../../styles.scss" as v;
 
 .balance {
-
+margin: 0;
   border-radius: 20px;
   font-family: v.$font-family;
 
   &__header {
-    margin: 1.7em auto;
+    margin: 0 auto;
     color: map-get(v.$colors, "balance");
     h4 {
       font-weight: 200;

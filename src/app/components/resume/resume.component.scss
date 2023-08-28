@@ -1,9 +1,12 @@
 @use "../../../styles" as s;
 
 .graph {
-  height: 90vh;
+  height: 87vh;
   display: flex;
   justify-content: center;
+}
+
+.graph canvas {
   margin: 1em auto;
 }
 
@@ -11,28 +14,36 @@
   display: flex;
   justify-content: space-around;
 
-  & a{
-      font-size: 1.1rem;
-      text-decoration: none;
-      color: #a4bafb;
-      font-family: s.$font-family;
-    }
+  & a {
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: #a4bafb;
+    font-family: s.$font-family;
+  }
 }
 
 button {
-    border: none;
-    outline: none;
-    font-family: s.$font-family;
-    background-image: linear-gradient(
-      to right bottom,
-      rgb(21, 8, 85),
-      rgb(13, 89, 92)
-    );
-    color: #fff;
-    font-size: 1.1rem;
-    padding: .2em;
-    border-radius: 7px;
-    width: 4rem;
-    margin: 0 .5em;
-    cursor: pointer;
-  }
+  border: none;
+  outline: none;
+  font-family: s.$font-family;
+  background-image: linear-gradient(
+    to right bottom,
+    rgb(21, 8, 85),
+    rgb(13, 89, 92)
+  );
+  color: #fff;
+  font-size: 1.1rem;
+  padding: 0.2em;
+  border-radius: 7px;
+  width: 4rem;
+  margin: 0 0.5em;
+  cursor: pointer;
+}
+input {
+  font-family: s.$font-family;
+  padding: .4em .3em .2em .1em;
+  text-align: center;
+  border-radius: 12px;
+  border: none;
+  color: #440d5c;
+}
