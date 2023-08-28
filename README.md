@@ -1,6 +1,15 @@
-# ExpensesIncome
+# Expenses Tracker/ Seguidor de gastos
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.1.
+
+Desk version:
+![localhost_4200_](https://github.com/natalyq1/Expenses-income/assets/98822525/f4296051-0c73-4768-94c8-9fcdd87d31bc)
+
+Mobile version:
+
+![localhost_4200_(Samsung Galaxy A51_71)](https://github.com/natalyq1/Expenses-income/assets/98822525/d85190d1-21fd-4676-9f6e-2044fb42ed58)
+![localhost_4200_(Samsung Galaxy A51_71) (1)](https://github.com/natalyq1/Expenses-income/assets/98822525/94dbb00e-ba02-4a49-955f-d4f771b061dd)
+![localhost_4200_(Samsung Galaxy A51_71) (2)](https://github.com/natalyq1/Expenses-income/assets/98822525/b6621ddf-0df3-4096-a583-479bf89fa51d)
 
 ## Development server
 
@@ -26,6 +35,6 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-comands:
-npm install ng2-charts --save
-npm install chart.js --save
+Development by Nataly Quiroga.
+GitHub: [Nataly's GitHub](https://github.com/natalyq1).
+
