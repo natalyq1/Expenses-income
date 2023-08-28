@@ -1,9 +1,16 @@
-<div class="graph">
-  <canvas baseChart
-  width="700"
-  height="500"
-  [type]="'line'"
-  [datasets]="lineChartData"
-  [labels]="lineChartLabels">
-  </canvas>
+<div>
+  <section class="options">
+    <a routerLink="/">Volver</a>
+    <article>
+    <input type="date" [value]="formatDate(selectedDate)" (input)="updateSelectedDate($event)">
+
+    <button (click)="filterTransactions()">Filtrar</button>
+  </article>
+  </section>
+  <div class="graph">
+
+    <canvas baseChart width="700" height="500" [type]="'line'" [datasets]="lineChartData" [labels]="lineChartLabels">
+    </canvas>
+  </div>
+
 </div>

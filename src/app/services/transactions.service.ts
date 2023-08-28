@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Transaction } from '../models/transaction.model';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -26,5 +26,20 @@ export class TransactionsService {
   public remove(transactionId: string): Observable<Transaction> {
     //Remove a transaction given its Id
     return this.httpClient.delete<Transaction>(`${this.url}/${transactionId}`);
+  }
+
+  public getTransactionsByDate(
+    selectedDate: string
+  ): Observable<Transaction[]> {
+    return this.httpClient.get<Transaction[]>(this.url).pipe(
+      map((transactions) => {
+        return transactions.filter((transaction) => {
+          const transactionDate = new Date(transaction.date)
+            .toISOString()
+            .split('T')[0];
+          return transactionDate === selectedDate;
+        });
+      })
+    );
   }
 }

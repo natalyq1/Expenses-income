@@ -1,7 +1,38 @@
-.graph
-{
+@use "../../../styles" as s;
+
+.graph {
   height: 90vh;
   display: flex;
   justify-content: center;
-  margin: 0 auto;
+  margin: 1em auto;
 }
+
+.options {
+  display: flex;
+  justify-content: space-around;
+
+  & a{
+      font-size: 1.1rem;
+      text-decoration: none;
+      color: #a4bafb;
+      font-family: s.$font-family;
+    }
+}
+
+button {
+    border: none;
+    outline: none;
+    font-family: s.$font-family;
+    background-image: linear-gradient(
+      to right bottom,
+      rgb(21, 8, 85),
+      rgb(13, 89, 92)
+    );
+    color: #fff;
+    font-size: 1.1rem;
+    padding: .2em;
+    border-radius: 7px;
+    width: 4rem;
+    margin: 0 .5em;
+    cursor: pointer;
+  }
